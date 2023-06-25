@@ -1,0 +1,31 @@
+.login{
+    background-color: rgb(162, 220, 244);
+     width:100%;
+     height: 32.1rem;
+}
+.form-box{
+    margin-left: 1rem;
+    margin-top: 2rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
+#card{
+    margin-left: 38%;
+    margin-right: 38%;
+    background-color: rgb(108, 200, 218);
+    height: 30rem;
+}
+#icon{
+    padding-left: 10%;
+}
+button{
+    align-items: center;
+    margin-left: 37%
+}
+p{
+    justify-content: center;
+    margin-left: 20%
+}
