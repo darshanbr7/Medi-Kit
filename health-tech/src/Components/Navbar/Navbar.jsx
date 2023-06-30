@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Navbar.css"
 import{BiLogInCircle} from "react-icons/bi"
-import { Link, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
   const navigate=useNavigate()
@@ -12,8 +12,11 @@ const Navbar = () => {
       <div className='ml-auto'>
         <ul className='navbar-nav'>
           {
-            localStorage.getItem("token")?<></>:<li className='nav-item'>
-            <BiLogInCircle size={26} className='mr-4' onClick={()=>{navigate("/login")}}/>
+            localStorage.getItem("token")?<div className='nav-item' onClick={()=>{
+              localStorage.removeItem("token")
+              alert("logout Succesfully")
+            }}>Logout</div>:<li className='nav-item'>
+            <BiLogInCircle size={26} className='mr-4' onClick={()=>{navigate("/login")} }/>
             </li>
           }
         </ul>

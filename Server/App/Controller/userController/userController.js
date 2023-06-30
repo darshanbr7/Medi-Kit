@@ -1,4 +1,4 @@
-const user=require("../Model/user/user")
+const user=require("../../Model/user/user")
 const bcrypt=require("bcryptjs")
 const jwt=require("jsonwebtoken")
 const userController={}
@@ -44,7 +44,7 @@ userController.login=(req,res)=>{
                                 "token":gentoken
                             })
                             }else{
-                                res.status(401).json("Enter A Valid Email/ Password")
+                                res.json({"error":"Enter A Valid Email/ Password"})
                             }
                         })
                         

@@ -3,11 +3,11 @@ import {HiOutlineMail} from "react-icons/hi"
 import {MdPassword} from "react-icons/md"
 import {RiMapPinUserLine} from "react-icons/ri"
 import "./Signup.css"
-import {Link,useNavigate} from "react-router-dom"
+import {Link} from "react-router-dom"
 import axios from "axios"
 
 const Signup = () => {
-    const navigate=useNavigate()
+
     const[name,setName]=React.useState("")
     const[email,setEmail]=React.useState("")
     const[password,setPassowrd]=React.useState("")
