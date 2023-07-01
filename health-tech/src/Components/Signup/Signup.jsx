@@ -3,27 +3,35 @@ import {HiOutlineMail} from "react-icons/hi"
 import {MdPassword} from "react-icons/md"
 import {RiMapPinUserLine} from "react-icons/ri"
 import "./Signup.css"
-import {Link} from "react-router-dom"
+import {Link,useNavigate} from "react-router-dom"
 import axios from "axios"
 
 const Signup = () => {
-
+    const navigate=useNavigate()
     const[name,setName]=React.useState("")
     const[email,setEmail]=React.useState("")
     const[password,setPassowrd]=React.useState("")
     const[check,setcheck]=React.useState(false)
- const submitHandler=(e)=>{
-  e.preventDefault()
-  try{
-    axios.post("http://localhost:3090/api/register",{
+    const formdata={
       "name":name,
       "email":email,
       "password":password
-    })
+    }
+ const submitHandler=(e)=>{
+  e.preventDefault()
+  try{
+    axios.post("http://localhost:3090/api/register",formdata)
            .then((res)=>{
-            console.log(res);
+            let result=res.data
+            if(result.hasOwnProperty("error")){
+              alert(result.message)
+              console.log(res)
+            }else{
+              alert("register succesfully")
+              console.log(result);
+              navigate("/login")
+            }
              
-             alert(res.data.error.errors.email.message);
              
            })
            .catch((err)=>{

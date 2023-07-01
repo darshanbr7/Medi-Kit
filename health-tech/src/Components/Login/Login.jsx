@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import {HiOutlineMail} from "react-icons/hi"
 import {MdPassword} from "react-icons/md"
-import {Link} from "react-router-dom"
+import {Link,useNavigate} from "react-router-dom"
 import "./Login.css"
 import axios from 'axios'
 const Login = () => {
+  const navigate=useNavigate()
   const[email,setEmail]=useState("")
   const[password,setPassword]=useState("")
   const formdata={
@@ -20,6 +21,7 @@ const Login = () => {
               alert(result.error)
             }else{
             localStorage.setItem("token",result.token)
+              navigate("/")
             }
            
           })

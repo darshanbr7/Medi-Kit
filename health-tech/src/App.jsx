@@ -13,12 +13,12 @@ const App = () => {
       <Navbar/>
      <Routes>
         <Route element={<PrivateRoutes/>}>
-            <Route path='/account' element={Account} />
+            <Route path='/account' element={<Account/>}  exact/>
         </Route>
 
-        <Route path='/' element={<Home/>} />
-        <Route path='/login' element={<Login/>} />
-        <Route path='/signup' element={<Signup/>} />
+        <Route path='/' element={<Home/>} exact />
+        <Route path='/login' element={<Login/>} exact />
+        <Route path='/signup' element={<Signup/>}  exact/>
         
         </Routes>
         

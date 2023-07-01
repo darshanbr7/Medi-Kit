@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Home.css"
 
+
 const Home = () => {
 
   return (
@@ -29,7 +30,7 @@ const Home = () => {
       <span className="carousel-control-next-icon" aria-hidden="true"></span>
       <span className="sr-only">Next</span>
     </a>
-    
+   
   </div>
   )
 }

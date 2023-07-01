@@ -16,6 +16,7 @@ userController.register=(req,res)=>{
                                     })
                                     .catch((err)=>{
                                         res.json({
+                                            "message":"user already exist",
                                             "error":err
                                         })
                                     })
@@ -25,7 +26,7 @@ userController.register=(req,res)=>{
                             })
                 })
                 .catch((err)=>{
-                    res.json(err)
+                    res.json({"error":err})
                 })
 }
 userController.login=(req,res)=>{

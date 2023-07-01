@@ -5,7 +5,6 @@ const userdb=new Schema({
     name:{
         type:String,
         required:[true,"name is required"],
-        unique:true,
         minLength:5
     },
     email:{
