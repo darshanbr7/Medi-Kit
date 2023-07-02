@@ -5,19 +5,21 @@ const jwt=require("jsonwebtoken")
  
 Auth.verify=(req,res,next)=>{
     const token=req.headers.authorization
+    
     let tokendata;
     try{
         tokendata=jwt.verify(token,"D123")
         user.find({email:tokendata.email})
-                .then((details)=>{
-                    req.user=details
+                .then(( )=>{
+                    req.user=tokendata
                     next()
                 })
                 .catch((err)=>{
                     res.json(err)
+                    
                 })
     }catch(err){
-        res.status(401).json(err.message)
+        res.json(err)
     }
 }   
 module.exports=Auth

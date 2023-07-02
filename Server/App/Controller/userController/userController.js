@@ -38,6 +38,7 @@ userController.login=(req,res)=>{
                             if(response){
                                const token={
                                 _id:details._id,
+                                name:details.name,
                                 email:details.email
                                }
                             const gentoken=jwt.sign(token,"D123",{expiresIn:"5d"})
@@ -53,6 +54,10 @@ userController.login=(req,res)=>{
             .catch((err)=>{
                 res.json(err)
             })
+}
+userController.getAccount=(req,res)=>{
+    let body=req.user
+    res.json(body)
 }
 
 userController.updatePassword=(req,res)=>{

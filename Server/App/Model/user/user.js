@@ -25,7 +25,7 @@ const userdb=new Schema({
         required : [true, 'Password is neccessary to login'],
         min : 8,
         max : 128,
-    },
+    }
 })
 const user=mongoose.model("user",userdb)
 module.exports=user

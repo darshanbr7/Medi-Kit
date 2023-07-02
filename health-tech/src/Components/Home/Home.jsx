@@ -13,13 +13,13 @@ const Home = () => {
     </ol>
     <div className="carousel-inner">
       <div className="carousel-item active">
-        <img className="d-block " src={"image1.jpeg"} alt="First slide" />
+        <img className="d-block " src={require("./Images/image1.jpeg")} alt="First slide"  />
       </div>
       <div className="carousel-item">
-        <img className="d-block w-100" src="..." alt="Second slide" />
+        <img className="d-block w-100" src={require("./Images/image2.jpg")} alt="Second slide" width={400}  />
       </div>
       <div className="carousel-item">
-        <img className="d-block w-100" src="..." alt="Third slide"/>
+        <img className="d-block w-100" src={require("./Images/image3.jpeg")} alt="Third slide" width={ 400}/>
       </div>
     </div>
     <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
