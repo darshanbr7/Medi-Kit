@@ -17,10 +17,6 @@ const useraddress=new Schema({
          type:String,
          required:[true,"pincode is required"]
       },
-      landmark:{
-         type:String,
-         required:[true,"landmark is required"]
-      },
       phNumber:{
          "type":String,
          reruired:[true,"phone number is required"],

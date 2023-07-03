@@ -35,3 +35,29 @@
     border-radius: 10px;
     letter-spacing: 0.7px;
   }
+  .page{
+    width: 97.7%;
+    height:40rem;
+    margin-left: 0.95rem;
+    background-color: rgb(188, 232, 232);
+    position: relative;
+  }
+  .card{
+    position: relative;
+    margin-left: 26rem;
+    width: 20rem;
+    background-color: rgb(188, 232, 232);
+    height: 29rem;
+    border: none;
+  }
+  h3{
+    font-size: 18px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+  span{
+    font-size: 20px;
+    color: red;
+    letter-spacing: 0.5px;
+  }
+  
