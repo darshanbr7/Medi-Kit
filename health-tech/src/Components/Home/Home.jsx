@@ -1,37 +1,47 @@
 import React from 'react'
+import SimpleImageSlider from "react-simple-image-slider"
 import "./Home.css"
 
 
 const Home = () => {
+  const [imageNum, setImageNum] = React.useState(1);
+  const sliderImages = [
+     {
+        url: "https://assets.thehansindia.com/h-upload/2023/04/30/1349187-nlem.webp",
+     },
+     {
+        url: "https://banner.myupchar.com/assets/1238/DHT_1_new.jpg",
+     },
+     {
+        url: "https://meds.myupchar.com/31/175617.jpg",
+     },
+     {
+        url: "https://meds.myupchar.com/17063/calutide-500.jpg",
+     },
+
+  ];
+
 
   return (
-    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-    <ol className="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div className="carousel-inner">
-      <div className="carousel-item active">
-        <img className="d-block " src={require("./Images/image1.jpeg")} alt="First slide"  />
-      </div>
-      <div className="carousel-item">
-        <img className="d-block w-100" src={require("./Images/image2.jpg")} alt="Second slide" width={400}  />
-      </div>
-      <div className="carousel-item">
-        <img className="d-block w-100" src={require("./Images/image3.jpeg")} alt="Third slide" width={ 400}/>
-      </div>
-    </div>
-    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span className="sr-only">Previous</span>
-    </a>
-    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-      <span className="sr-only">Next</span>
-    </a>
-   
-  </div>
+    <React.Fragment>
+      <div className='home'>
+         <div id='slider'>
+          <SimpleImageSlider
+              height={350}
+              width={800}
+              images={sliderImages}
+              showBullets={true}
+              showNavs={false}
+              autoPlay={true} 
+              onStartSlide = {(index) => {
+                setImageNum(index);
+              }}
+                autoPlayDelay = {4}
+        />   
+    </div>
+</div>
+</React.Fragment>
+
   )
 }
 

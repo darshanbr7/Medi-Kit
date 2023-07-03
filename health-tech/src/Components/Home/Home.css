@@ -1,5 +1,13 @@
-img{
-    margin-top: 2rem;
-    height: 400px;
-    margin-left: 22rem;
+
+.home{
+    width: 100%;
+    background-color: rgb(168, 233, 165);
+    position: relative;
+}
+#slider{
+    justify-content: center;
+    margin-left: 12rem;
+    padding-top: 1rem;
+    height: 25rem;
+   
 }

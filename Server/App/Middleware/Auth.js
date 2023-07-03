@@ -5,7 +5,6 @@ const jwt=require("jsonwebtoken")
  
 Auth.verify=(req,res,next)=>{
     const token=req.headers.authorization
-    
     let tokendata;
     try{
         tokendata=jwt.verify(token,"D123")

@@ -10,7 +10,7 @@ const Navbar = () => {
     <div>
     <div className="container-fluid">
       <nav className='navbar navbar-expand-lg bg-info'>
-        <div className=' navbar navbar-brand text-white'>Medi Kit</div>
+        <div className=' navbar navbar-brand text-white' onClick={()=>{navigate("/")}}>Medi Kit</div>
         <div className="ml-auto">
           <ul className='navbar-nav'>
             {

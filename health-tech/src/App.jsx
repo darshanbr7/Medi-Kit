@@ -6,6 +6,7 @@ import Home from './Components/Home/Home'
 import Signup from './Components/Signup/Signup'
 import Account from './Components/Account/Account'
 import PrivateRoutes from './Components/PrivateRoute/PrivateRoutes'
+import Address from './Components/Address/Address'
 const App = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const App = () => {
      <Routes>
         <Route element={<PrivateRoutes/>}>
             <Route path='/account' element={<Account/>}  exact/>
+            <Route path='/address' element={<Address/>}  exact/>
         </Route>
 
         <Route path='/' element={<Home/>} exact />

@@ -20,7 +20,13 @@ const useraddress=new Schema({
       landmark:{
          type:String,
          required:[true,"landmark is required"]
-   },
+      },
+      phNumber:{
+         "type":String,
+         reruired:[true,"phone number is required"],
+         minLength:10,
+         maxLength:10
+      },
       userId:{
          type:Schema.Types.ObjectId,
          ref:"user",
