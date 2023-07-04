@@ -1,10 +1,11 @@
 import React from 'react';
 import { MDBBtn, MDBCard, MDBCardBody, MDBCol, MDBIcon, MDBInput, MDBRow, MDBTypography } from 'mdb-react-ui-kit';
-import "./Address.css"
- let Address=()=> {
+import "./Delivery.css" 
+
+function Delivery() {
   return (
     <>
-      <div className="mx-auto gradient-custom mt-5" style={{ maxWidth: '800px', height: '400px' }}>
+      <div className="mx-auto gradient-custom mt-5" style={{ maxWidth: '700px', height: '400px' }}>
         <MDBRow className="pt-3 mx-3">
           <MDBCol md="3">
             <div className="text-center" style={{ marginTop: '50px', marginLeft: '10px' }}>
@@ -61,4 +62,4 @@ import "./Address.css"
     </>
   );
 }
-export default Address
+export default  Delivery

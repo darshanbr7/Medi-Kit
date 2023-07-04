@@ -13,8 +13,11 @@ const Navbar = () => {
         <div className=' navbar navbar-brand text-white' onClick={()=>{navigate("/")}}>Medi Kit</div>
         <div className="ml-auto">
           <ul className='navbar-nav'>
+            
+             <li className='nav-item'><Link className=' nav-link  text-white mr-2' to={"/product"}>Product</Link></li>
+            
             {
-              localStorage.getItem("token")  ?   <li className='nav-item'><Link  className='nav-link text-white'  to={"/account"}><RiAccountCircleLine size={26}/></Link>  </li>     : <li className='nav-item'><BiLogInCircle size={26} className='mr-4' onClick={()=>{navigate("/login")} }/> </li>
+              localStorage.getItem("token")  ?   <li className='nav-item'><Link  className='nav-link text-white mr-2'  to={"/account"}><RiAccountCircleLine size={26}/></Link>   </li>     : <li className='nav-item'><BiLogInCircle size={26} className='mr-4' onClick={()=>{navigate("/login")} }/> </li>
             }
            
           </ul>

@@ -49,10 +49,10 @@ const Account = () => {
       <userContext.Provider value={detail._id}>
       <div className='parent'>
         <div className='main'>
-        <div className='child' onClick={()=>{navigate("/address")}}>Account</div>
+        <div className='child' onClick={()=>{navigate("/delivery")}}>Account</div>
         </div>
         <div className='main'>
-        <div className='child'>Wishlist</div>
+        <div className='child' onClick={()=>{navigate("/wishlist")}}>Wishlist</div>
         </div>
         <div className='main'>
         <div className='child'>Orders</div>

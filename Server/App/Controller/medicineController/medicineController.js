@@ -7,7 +7,7 @@ medicineController.add=(req,res)=>{
                             res.json(response)
                         })
                         .catch((err)=>{
-                            res.json(err)
+                            res.json(err.message)
                         })
 }
 medicineController.getAll=(req,res)=>{

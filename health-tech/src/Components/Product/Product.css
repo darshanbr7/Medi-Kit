@@ -1,0 +1,78 @@
+#search{
+    height: 2.4rem;
+    margin-top: 1rem;
+    width: 100%;
+    background-color: aqua;
+    position: relative;
+}
+input{
+    position: absolute;
+    margin-left: 30%;
+    border-radius: 10px;
+    margin-top: 0.4%;
+    width: 20rem;
+}
+.button{
+    position: absolute;
+    margin-left: 56%;
+    border-radius: 10px;
+    margin-top: 0.4%;
+    background-color: rgb(179, 241, 146);
+    color: red;
+}
+.product{
+    display: inline-flex;
+    width: 30%;
+    height: 10rem;
+    background-color: antiquewhite;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    border: 1px solid red;
+}
+img{
+    background: transparent;
+}
+.name{
+    width: 100%;
+    color: rgb(41, 17, 198);
+    position: relative;
+}
+.price{
+    
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 4%;
+}
+.tab{
+    
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 5.5%;
+}
+p{
+    font-size: 12px;
+    color: black;
+    font-weight: 200;
+}
+.cart{
+    position: absolute;
+    margin-left: 14%;
+    margin-top: 8%;
+    width: 4rem;
+    height: 2rem;
+    background-color: rgb(92, 120, 225);
+    text-align: center;
+    border-radius: 10px;
+    color: yellow;
+}
+.buy{
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 8%;
+    width: 4rem;
+    height: 2rem;
+    background-color: rgb(92, 120, 225);
+    text-align: center;
+    border-radius: 10px;
+    color: yellow;
+}
