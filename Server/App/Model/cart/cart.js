@@ -1,24 +1,16 @@
 const mongoose=require("mongoose")
+const medicine=require("../medicine/medicine")
 const Schema=mongoose.Schema
 const addCart=new Schema({
-    name:{
-        type:String,
-        required:[true ,"medicine name  is required"],
-        unique:true
+    email:{
+            type:String,
+            required:[true,"email is required"]
     },
-    avatar:{
-        type:String,
-        required:[true,"image is required"]
-    },
-    price:{
-        type:String,
-        required:[true,"price is required"]
-    }, 
-    userId:{
+    medicine:{
         type:Schema.Types.ObjectId,
-        ref:"user",
-        required:[true,"user id is required"]
-  }
+        ref:medicine,
+        reqired:[true,"medicine is required"]
+    }
 })
 const cart=mongoose.model("cart",addCart)
 module.exports=cart

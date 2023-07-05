@@ -38,12 +38,11 @@ const Product = () => {
                }
                       <div className='cart' onClick={()=>{
                                                       axiosInstance.post("http://localhost:3090/api/add/cart",{
-                                                                          "name":ele.name,
-                                                                          "avatar":ele.avatar,
-                                                                          "price":ele.price
+                                                                          "medicine":ele._id
                                                                         })
                                                                         .then((response)=>{
                                                                           let result=response.data
+                                                                         
                                                                           if(result.hasOwnProperty("error")){
                                                                             alert("Item already added")
                                                                           }else{
