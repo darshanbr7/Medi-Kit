@@ -17,7 +17,7 @@ const Navbar = () => {
              <li className='nav-item'><Link className=' nav-link  text-white mr-2' to={"/product"}>Product</Link></li>
             
             {
-              localStorage.getItem("token")  ?   <li className='nav-item'><Link  className='nav-link text-white mr-2'  to={"/account"}><RiAccountCircleLine size={26}/></Link>   </li>     : <li className='nav-item'><BiLogInCircle size={26} className='mr-4' onClick={()=>{navigate("/login")} }/> </li>
+              localStorage.getItem("token")  ?   <li className='nav-item'><Link  className='nav-link text-white mr-2'  to={"/account"}><RiAccountCircleLine size={26} color={"white"}/></Link>   </li>     : <li className='nav-item'><Link  className='nav-link text-white mr-2'  to={"/login"}><BiLogInCircle size={26} color={"white"}/></Link>   </li>   
             }
            
           </ul>

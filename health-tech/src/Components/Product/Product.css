@@ -1,22 +1,24 @@
-#search{
+.p-search{
     height: 2.4rem;
-    margin-top: 1rem;
     width: 100%;
     background-color: aqua;
     position: relative;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
 }
-input{
+.p-serarch-input{
     position: absolute;
     margin-left: 30%;
     border-radius: 10px;
-    margin-top: 0.4%;
+    align-items: center;
     width: 20rem;
+    margin-top: 0.3rem;
 }
-.button{
+.p-serarch-button{
     position: absolute;
-    margin-left: 56%;
+    margin-left: 57%;
+    margin-top: 0.3rem;
     border-radius: 10px;
-    margin-top: 0.4%;
     background-color: rgb(179, 241, 146);
     color: red;
 }
@@ -25,23 +27,23 @@ input{
     width: 30%;
     height: 10rem;
     background-color: antiquewhite;
-    margin-top: 2rem;
+    margin-top:2rem ;
     margin-left: 2rem;
     border: 1px solid red;
 }
 img{
     background: transparent;
 }
-.name{
+.p-name{
     width: 100%;
     color: rgb(41, 17, 198);
     position: relative;
 }
-.price{
-    
+.p-price{
     position: absolute;
+    margin-top: 3.2rem;
     margin-left: 15%;
-    margin-top: 4%;
+    
 }
 .tab{
     

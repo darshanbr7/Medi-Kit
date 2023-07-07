@@ -19,13 +19,13 @@ const App = () => {
             <Route path='/account' element={<Account/>}  exact/>
             <Route path='/delivery' element={<Delivery/>}  exact/>
             <Route path='/wishlist' element={<Wishlist/>}  exact/>
+           
         </Route>
 
         <Route path='/' element={<Home/>} exact />
         <Route path='/login' element={<Login/>} exact />
         <Route path='/signup' element={<Signup/>}  exact/>
-        <Route path='/product' element={<Product/>}  exact/>
-        
+        <Route path='/product' element={<Product/>}  exact/>   
         </Routes>
         
       

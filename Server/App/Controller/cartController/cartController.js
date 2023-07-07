@@ -6,7 +6,7 @@ cartController.add=(req,res)=>{
     const body=req.body
     const data=req.user
     let Data=new cart(body)
-    Data.email=data.email
+    Data.email=data.email 
     Data.save()
         .then((data)=>{
             res.json(data)

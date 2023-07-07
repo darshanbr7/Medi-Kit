@@ -27,8 +27,8 @@ const Home = () => {
       <div className='home'>
          <div id='slider'>
           <SimpleImageSlider
-              height={350}
-              width={800}
+              height={300}
+              width={600}
               images={sliderImages}
               showBullets={true}
               showNavs={false}

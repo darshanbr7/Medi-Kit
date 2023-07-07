@@ -1,64 +1,50 @@
 import React, { useEffect } from 'react'
-import {BiRupee} from "react-icons/bi"
 import "./Product.css"
 import axios from "axios"
-import axiosInstance from "../AxiosInstance/AxiosInstance"
+
+import Search from './Search'
+import Products from './Products'
 const Product = () => {
     const[product,setProduct]=React.useState([])
+    
+    const [keyword, setKeyword] =React.useState('');
+    const [medicine, setMedicine] = React.useState(product)
+
+    const fetchProduct=async()=>{
+      try{
+        let result= await axios.get(`http://localhost:3090/api/all/medicine`)
+        setProduct(result.data)
+      }catch(error){
+        console.log(error)
+      }
+    }
     useEffect(()=>{
-        axios.get(`http://localhost:3090/api/all/medicine`)
-                .then((response)=>{
-                    setProduct(response.data)                   
-                })
-                .catch((err)=>{
-                    console.log(err);
-                })
+       fetchProduct()
     },[])
+    const updateKeyword=(keyword)=>{
+      if(keyword===""){
+        setMedicine(product)
+       setKeyword(keyword);
+
+      }else{
+      const filterBySearch = product.filter((item) => {
+          return item.name.toLowerCase().includes(keyword.toLowerCase())
+          
+       })
+       setKeyword(keyword);
+       setMedicine(filterBySearch);
+      }
+  }
+
+   
+  
   return (
     <React.Fragment>
-        <div id='search'>
-            <input type='search'/>
-            <button className='button'>Search</button>
+        <div className='p-search'>
+        <Search keyword={keyword} onChange={updateKeyword} />
         </div>
-        <div>
-        {
-          product.map((ele,index)=>{
-            return (<div key={index} className='product'>
-                <div>
-                    <img src={ele.avatar} height={158} width={150} alt=' not found'/>
-                </div>
-                <div className='name'>
-                  <h3>{ele.name}</h3>
-                </div>
-                <div className='price'>
-                <h3>  <BiRupee size={21}/> :  {ele.price}</h3>
-             </div>
-               {
-                ele.type==="Tablet"?<p className='tab'>/per 10 Tablet</p>:<></>
-               }
-                      <div className='cart' onClick={()=>{
-                                                      axiosInstance.post("http://localhost:3090/api/add/cart",{
-                                                                          "medicine":ele._id
-                                                                        })
-                                                                        .then((response)=>{
-                                                                          let result=response.data
-                                                                         
-                                                                          if(result.hasOwnProperty("error")){
-                                                                            alert("Item already added")
-                                                                          }else{
-                                                                            alert("Item added Succesfully")
-                                                                          }
-                                                                        })
-                                                                        .catch((err)=>{
-                                                                          console.log(err);
-                                                                        })
-
-                }}>Cart</div>
-                <div className='buy'>Buy</div>
-                 </div>)
-          })
-        }
-        </div>
+        <Products  medicine={medicine}/>
+       
     </React.Fragment>
   )
 }
